@@ -25,6 +25,7 @@ def remove_characters_other_way(s: str) -> str:
         print(new_s)
     print("--- %s seconds ---" % (time.time() - start_time))
 
+
 def remove_characters_third_way(s: str) -> str:
     start_time = time.time()
     new_s = ""
