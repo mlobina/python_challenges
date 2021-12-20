@@ -3,7 +3,7 @@ from decorator import check_time
 
 @check_time
 def replace_char(s: str, curr_char: str, new_char: str) -> str:
-    if s.count(curr_char) != 0:
+    if s.count(curr_char):
         new_s = s.replace(curr_char, new_char)
         print(new_s)
     else:
