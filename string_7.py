@@ -1,18 +1,16 @@
-import time
+from decorator import check_time
 
 
-# the fastest way
+@check_time
 def remove_nth_character(s: str, n: int) -> str:
-    start_time = time.time()
     if (len(s) == 0) or (n >= len(s)):
         print(s)
     else:
         print(s.replace(s[n], ""))
-    print("--- %s seconds ---" % (time.time() - start_time))
 
 
+@check_time
 def remove_nth_character_other_way(s: str, n: int) -> str:
-    start_time = time.time()
     if (len(s) == 0) or (n >= len(s)):
         print(s)
     else:
@@ -21,7 +19,6 @@ def remove_nth_character_other_way(s: str, n: int) -> str:
             if i != n:
                 new_s += s[i]
         print(new_s)
-    print("--- %s seconds ---" % (time.time() - start_time))
 
 
 if __name__ == "__main__":
